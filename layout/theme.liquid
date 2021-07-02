@@ -192,6 +192,8 @@
 </head>
 
 <body class="template-{{ request.page_type | handle }}">
+  {% comment %} include GTM noscript iframe {% endcomment %}
+  {% include 'GTM-noscript' %}
 
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
