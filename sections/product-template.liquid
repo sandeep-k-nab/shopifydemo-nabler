@@ -211,7 +211,10 @@
               {% include 'icon-error' %}
               <span class="product-form__error-message" data-error-message>{{ 'products.product.quantity_minimum_message' | t }}</span>
             </div>
-
+<p class="line-item-property__field">
+  <label for="brand">Brand</label>
+  <input required class="required" id="brand" type="text" name="properties[Brand]">
+</p>
             <div class="product-form__controls-group product-form__controls-group--submit">
               <div class="product-form__item product-form__item--submit
                 {%- if section.settings.enable_payment_button %} product-form__item--payment-button {%- endif -%}
