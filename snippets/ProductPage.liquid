@@ -1,0 +1,51 @@
+/** DATALAYER: Product Page
+            * Fire on all Product View pages. */
+            
+ if (template.match(/.*product.*/gi) && !template.match(/.*collection.*/gi)) {
+                
+    sku = '';
+    var product = {
+        'products': [{
+            'id'              : {{product.id | json}},
+            'sku'             : {{product.selected_or_first_available_variant.sku | json}},
+            'variantId'       : {{product.selected_or_first_available_variant.id | json}},
+            'productType'     : {{product.type | json}},
+            'name'            : {{product.title | json}},
+            'price'           : {{product.price | money_without_currency | remove: "," | json}},
+            'description'     : {{product.description | strip_newlines | strip_html | json}},
+            'imageURL'        : "https:{{product.featured_image.src|img_url:'grande'}}", 
+            'productURL'      : '{{shop.secure_url}}{{product.url}}',
+            'brand'           : {{shop.name | json}},              
+            'comparePrice'    : {{product.compare_at_price_max | money_without_currency | remove: "," | json}},
+            'categories'      : {{product.collections | map:"title" | json}},
+            'currentCategory' : {{collection.title | json}},
+            'productOptions'  : {
+                {% for option in product.options_with_values %}
+                {% for value in option.values %}
+                {% if option.selected_value == value %}
+                {{option.name | json}} : {{value | json}},
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+            }
+        }]
+    };
+    
+    function productView(){
+        var sku = {{product.selected_or_first_available_variant.sku | json}};
+        dataLayer.push(product, {
+            'pageType' : 'Product',
+            'event'    : 'Product'});
+            if(__DL__.debug){
+                console.log("Product"+" :"+JSON.stringify(product, null, " "));
+            }
+        }
+        productView();
+        
+        $(__DL__.cartTriggers).click(function(){
+            var skumatch = {{product.selected_or_first_available_variant.sku | json}};
+            if(sku != skumatch){
+                productView();
+            }
+        });
+    }
