@@ -1,0 +1,62 @@
+/** DATALAYER: Cart View
+                * Fire anytime a user views their cart (non-dynamic) */
+                
+ {% if template contains 'cart' %}
+ var cart = {
+     'products':[{% for line_item in cart.items %}{
+         'id'       : {{line_item.product_id | json}},
+         'sku'      : {{line_item.sku | json}},
+         'variant'  : {{line_item.variant_id | json}},
+         'name'     : {{line_item.title | json}},
+         'price'    : {{line_item.price | money_without_currency | remove: "," | json}},
+         'quantity' : {{line_item.quantity | json}}
+     },{% endfor %}],
+     'pageType' : 'Cart',
+     'event'    : 'Cart'
+ };
+ 
+ dataLayer.push(cart);
+ if(__DL__.debug){
+     console.log("Cart"+" :"+JSON.stringify(cart, null, " "));
+ }
+ 
+ __DL__.cart = cart.products;
+ $(__DL__.removeCartTrigger).on('click', function (event) {
+     
+     setTimeout(function(){
+         // remove from cart
+         jQuery.getJSON("/cart", function (response) {
+             // get Json response 
+             __DL__.removeCart = response;
+             var removeFromCart = {
+                 'products': __DL__.removeCart.items.map(function (line_item) {
+                     return {
+                         'id'       : line_item.product_id,
+                         'sku'      : line_item.sku,
+                         'variant'  : line_item.variant_id,
+                         'name'     : line_item.title,
+                         'price'    : (line_item.price/100),
+                         'quantity' : line_item.quantity
+                     }
+                 }),
+                 'pageType' : 'Remove from Cart',
+                 'event'    : 'Remove from Cart'         
+             };
+             __DL__.removeCart = removeFromCart;
+             var cartIDs = [];
+             var removeIDs = [];
+             var removeCart = [];
+             
+             // remove from cart logic
+             for(var i=__DL__.cart.length-1;i>=0;i--){var x=parseFloat(__DL__.cart[i].variant);cartIDs.push(x)}for(var i=__DL__.removeCart.products.length-1;i>=0;i--){var x=parseFloat(__DL__.removeCart.products[i].variant);removeIDs.push(x)}function arr_diff(b,c){var a=[],diff=[];for(var i=0;i<b.length;i++){a[b[i]]=true}for(var i=0;i<c.length;i++){if(a[c[i]]){delete a[c[i]]}else{a[c[i]]=true}}for(var k in a){diff.push(k)}return diff};var x=arr_diff(cartIDs,removeIDs)[0];for(var i=__DL__.cart.length-1;i>=0;i--){if(__DL__.cart[i].variant==x){removeCart.push(__DL__.cart[i])}}
+             
+             dataLayer.push(removeCart);
+             if (__DL__.debug) {
+                 console.log("Cart"+" :"+JSON.stringify(removeCart, null, " "));
+             }
+         });
+     }, 2000);
+     
+ });
+ 
+ {% endif %}
