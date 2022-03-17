@@ -1,0 +1,17 @@
+
+        // * DATALAYER: Blog Articles
+        // * Fire on Blog Article Pages 
+        
+ {% if template contains 'article' %}
+ var blog = {
+     'author'      : {{article.author | json}},
+     'title'       : {{article.title | json}},
+     'dateCreated' : {{article.created_at | json}},
+     'pageType'    : 'Blog',
+     'event'       : 'Blog'
+ };
+ dataLayer.push(blog);
+ if(__DL__.debug){
+     console.log("Blog"+" :"+JSON.stringify(blog, null, " "));
+ }
+ {% endif %}
