@@ -184,8 +184,12 @@
     }
   </script>
   
-  {% include 'GTM' %}
-  {% include 'dataLayer-allPages' %}
+  {% render 'GTM' %}
+  
+  {% comment %}
+  {% render 'dataLayer-allPages' %}
+  {% endcomment %}
+  
   {{ content_for_header }}
 </head>
 
