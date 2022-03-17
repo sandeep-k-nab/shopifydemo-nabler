@@ -183,12 +183,12 @@
       scripts.parentNode.insertBefore(polyfill, scripts);
     }
   </script>
-  {% comment %}
+  
   {% render 'GTM' %}
-  {% endcomment %}
   
+  {% comment %}
   {% render 'dataLayer-allPages' %}
-  
+  {% endcomment %}
   
   {{ content_for_header }}
 </head>
