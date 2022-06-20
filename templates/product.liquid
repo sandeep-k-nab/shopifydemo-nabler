@@ -4,7 +4,7 @@
 
 {% section 'product-template' %}
 {% section 'product-recommendations' %}
-{% include 'segment-product-viewed' %}
+{% include 'segment-product-view' %}
 <div id="backToCollection"></div>
 
 <script>
@@ -35,22 +35,6 @@
       backToCollectionContainer.insertAdjacentHTML('afterbegin', backToCollectionHTML);
     }
   }
-  var props = {
-    product_id: "{{product.id}}",
-    sku: "{{product.variants.first.sku}}",
-    category: "{{product.collections.first.title}}",
-    name: "{{product.title"}}",
-    variant: "{{product.variants.first.title | replace: " / ", "," }}",
-    is_subscription: false,
-    price: "{{product.selected_or_first_available_variant.price | divided_by: 100.0 }}",
-    quantity: 1,
-    coupon: null,
-    url: "{{product.url}}",
-    image_url: "{{product.featured_image | img_url: "master" }}",
-    stock_status: "{% if product.available %}in-stock{% else %}out-of-stock{% endif %}"
-  }
-
-  analytics.track('Product Viewed', props);
 </script>
 
 {% assign current_variant = product.selected_or_first_available_variant %}
