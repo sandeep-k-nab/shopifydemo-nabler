@@ -195,12 +195,40 @@
     {% comment %}
       {% render 'dataLayer-allPages' %}
     {% endcomment %}
-    
+
     <script src="https://assets.adobedtm.com/ac7e16474f69/96140e2479c8/launch-0e0f717eb9b3.min.js" async></script>
     {{ content_for_header }}
+    {% comment %}
+      <!-- Google Tag Manager -->
+    {% endcomment %}
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5F8SJBQM');
+    </script>
+    {% comment %}
+      <!-- End Google Tag Manager -->
+    {% endcomment %}
   </head>
 
   <body class="template-{{ request.page_type | handle }}">
+    {% comment %}
+      <!-- Google Tag Manager (noscript) -->
+    {% endcomment %}
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5F8SJBQM"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
+    {% comment %}
+      <!-- End Google Tag Manager (noscript) -->
+    {% endcomment %}
+
     <a class="in-page-link visually-hidden skip-link" href="#MainContent">
       {{- 'general.accessibility.skip_to_content' | t -}}
     </a>
