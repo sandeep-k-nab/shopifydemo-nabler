@@ -265,10 +265,18 @@
   </head>
 
   <body class="template-{{ request.page_type | handle }}">
+    <!-- Loading script asynchronously -->
+    <script type="text/javascript">
+    (function(a,b,c,d){
+    a='https://tags.tiqcdn.com/utag/nabler-sandbox/testing-profile/prod/utag.js';
+    b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+    a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+    })();
+    </script>
     {% comment %}
       Tealium snippet
     {% endcomment %}
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       var utag_data = {
         tealium_event : "", //
         event_category : "", //
@@ -333,15 +341,15 @@
         debugTiming : "", //
         eventTime : "" //
       }
-    </script>
+    </script> -->
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       (function(a,b,c,d){
       a='https://tags.tiqcdn.com/utag/nabler-sandbox/rohit.m/prod/utag.js';
       b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
       a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
       })();
-    </script>
+    </script> -->
     {% comment %}
       tealium snippet ends here
     {% endcomment %}
