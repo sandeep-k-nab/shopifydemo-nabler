@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "color_button": "#ec1c24",
@@ -6,7 +15,7 @@
         "type": "header",
         "settings": {
           "align_logo": "left",
-          "logo": "shopify:\/\/shop_images\/nabler_logo.png",
+          "logo": "shopify://shop_images/nabler_logo.png",
           "logo_max_width": 180,
           "main_linklist": "main-menu",
           "message": false,
@@ -20,15 +29,15 @@
       "hero-1": {
         "type": "hero",
         "settings": {
-          "image": "shopify:\/\/shop_images\/banner-bg-scaled.jpg",
+          "image": "shopify://shop_images/banner-bg-scaled.jpg",
           "alignment": "top",
           "hero_layout": "full_width",
           "hero_size": "small",
           "text_size": "medium",
           "title": "Welcome to Nabler Shop",
-          "text": "<p>This is a development store for testing and creative purposes. If you have any implementation requests, please contact the DPI team.<\/p>",
+          "text": "<p>This is a development store for testing and creative purposes. If you have any implementation requests, please contact the DPI team.</p>",
           "button_label": "Visit Nabler Site",
-          "button_link": "https:\/\/www.nabler.com"
+          "button_link": "https://www.nabler.com"
         }
       },
       "feature-row": {
@@ -36,7 +45,7 @@
         "settings": {
           "layout": "left",
           "title": "Image with text",
-          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
           "button_label": "",
           "button_link": ""
         }
@@ -49,7 +58,7 @@
             "settings": {
               "enable_image": true,
               "title": "Add a title or tagline",
-              "text": "<p>Share blog posts(edited), products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "text": "<p>Share blog posts(edited), products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -59,7 +68,7 @@
             "settings": {
               "enable_image": true,
               "title": "Add a title or tagline",
-              "text": "<p>Share blog posts(edited), products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "text": "<p>Share blog posts(edited), products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -69,7 +78,7 @@
             "settings": {
               "enable_image": true,
               "title": "Add a title or tagline",
-              "text": "<p>Share blog posts(edited), products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "text": "<p>Share blog posts(edited), products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
               "button_label": "",
               "button_link": ""
             }
@@ -102,21 +111,21 @@
           "quotes-0": {
             "type": "quote",
             "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
               "author": "Author's name"
             }
           },
           "quotes-1": {
             "type": "quote",
             "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
               "author": "Author's name"
             }
           },
           "quotes-2": {
             "type": "quote",
             "settings": {
-              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
               "author": "Author's name"
             }
           }
@@ -214,15 +223,21 @@
       "hero-1",
       "16252187092f93679c",
       "collection"
-    ]
+    ],
+    "blocks": {
+      "15621005432394230896": {
+        "type": "shopify://apps/onetrust-consent-management/blocks/consent_management/a0f47f36-e440-438e-946e-6f1b3963b606",
+        "disabled": false,
+        "settings": {}
+      }
+    }
   },
   "presets": {
     "Default": {
       "sections": {
         "header": {
           "type": "header",
-          "settings": {
-          }
+          "settings": {}
         },
         "hero-1": {
           "type": "hero",
@@ -233,26 +248,22 @@
         },
         "feature-row": {
           "type": "feature-row",
-          "settings": {
-          }
+          "settings": {}
         },
         "feature-columns": {
           "type": "feature-columns",
           "blocks": {
             "feature-columns-0": {
               "type": "text_block",
-              "settings": {
-              }
+              "settings": {}
             },
             "feature-columns-1": {
               "type": "text_block",
-              "settings": {
-              }
+              "settings": {}
             },
             "feature-columns-2": {
               "type": "text_block",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -281,18 +292,15 @@
           "blocks": {
             "quotes-0": {
               "type": "quote",
-              "settings": {
-              }
+              "settings": {}
             },
             "quotes-1": {
               "type": "quote",
-              "settings": {
-              }
+              "settings": {}
             },
             "quotes-2": {
               "type": "quote",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -309,18 +317,15 @@
           "blocks": {
             "image-bar-0": {
               "type": "image",
-              "settings": {
-              }
+              "settings": {}
             },
             "image-bar-1": {
               "type": "image",
-              "settings": {
-              }
+              "settings": {}
             },
             "image-bar-2": {
               "type": "image",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -328,21 +333,18 @@
             "image-bar-1",
             "image-bar-2"
           ],
-          "settings": {
-          }
+          "settings": {}
         },
         "footer": {
           "type": "footer",
           "blocks": {
             "footer-0": {
               "type": "link_list",
-              "settings": {
-              }
+              "settings": {}
             },
             "footer-1": {
               "type": "newsletter",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -493,23 +495,20 @@
         },
         "1492033809691": {
           "type": "map",
-          "settings": {
-          }
+          "settings": {}
         },
         "1492033877875": {
           "type": "quotes",
           "blocks": {
             "1492033877875-0": {
               "type": "quote",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
             "1492033877875-0"
           ],
-          "settings": {
-          }
+          "settings": {}
         },
         "1492033924902": {
           "type": "custom-content",
@@ -535,18 +534,15 @@
           "blocks": {
             "1492096252560-0": {
               "type": "featured_collection",
-              "settings": {
-              }
+              "settings": {}
             },
             "1492096252560-1": {
               "type": "featured_collection",
-              "settings": {
-              }
+              "settings": {}
             },
             "1492096252560-2": {
               "type": "featured_collection",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -585,18 +581,15 @@
           "blocks": {
             "link_list": {
               "type": "link_list",
-              "settings": {
-              }
+              "settings": {}
             },
             "text": {
               "type": "text",
-              "settings": {
-              }
+              "settings": {}
             },
             "newsletter": {
               "type": "newsletter",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
