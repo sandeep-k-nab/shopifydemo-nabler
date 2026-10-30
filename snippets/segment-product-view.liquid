@@ -3,7 +3,7 @@
     product_id: "{{product.id}}",
     sku: "{{product.variants.first.sku}}",
     category: "{{product.collections.first.title}}",
-    name: "{{product.title"}}",
+    name: "{{ product.title }}",
     variant: "{{product.variants.first.title | replace: " / ", "," }}",
     is_subscription: false,
     price: "{{product.selected_or_first_available_variant.price | divided_by: 100.0 }}",
@@ -15,4 +15,13 @@
   }
 
   analytics.track('Product Viewed', props);
-</script>
+</script>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{{product.title"}}'
+  to: "{{ product.title }}"
+  position: 166..185
+{%- endcomment -%}
